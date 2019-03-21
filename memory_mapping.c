@@ -11,7 +11,21 @@ int main()
     int stack2 = 2;
     int stack3 = 3;
 
-    heap1 = malloc (max);
+    heap1 = malloc (data1);
     free (data1);
+
+    FILE *text;
+
+    if ((text = fopen("mem","r")) == NULL){
+       printf("Error! opening file");
+       exit(1);
+    }
+
+    for(int i = 0; i < 5; i++){
+    	printf("text%d=%p\n", i, &text[i]);
+    }
+
+    fclose(text);
+
     return 0;
 }
