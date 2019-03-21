@@ -48,5 +48,21 @@ int main()
     free (heap2);
     free(heap3);
     free(heap4);
+
+
+    FILE *text;
+
+    printf("-------------------\n");
+    if ((text = fopen("m","r")) == NULL){
+       printf("Error! opening file");
+       exit(1);
+    }
+
+    for(int i = 0; i < 5; i++){
+    	printf("text%d=%p\n", i, &text[i]);
+    }
+
+    fclose(text);
+
     return 0;
 }
