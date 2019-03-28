@@ -4,6 +4,8 @@
 
 #define SIZE 16
 
+// CIS 452 Lab 8 by Kaylin Zaroukian and Marc Chesebro
+
 int main()
 {
     char *data1; 
